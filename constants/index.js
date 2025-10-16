@@ -54,21 +54,21 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: '/planet-06.png',
+    imgUrl: '/ec.png',
     title: 'Our Mentors',
     subtitle:
       'CyberSpace Legion is guided by highly accomplished mentors - PhD professionals and industry experts from FAST-NUCES and the cybersecurity domain, ensuring every initiative aligns with real-world expertise.',
     link: '/mentors',
   },
   {
-    imgUrl: '/planet-07.png',
+    imgUrl: '/teams.png',
     title: 'Executive Council',
     subtitle:
       'Meet the core leadership driving CSL - visionary students and professionals leading cybersecurity awareness, competitions, and collaborative initiatives at FAST Islamabad.',
     link: '/executive-council',
   },
   {
-    imgUrl: '/planet-08.png',
+    imgUrl: '/past.png',
     title: 'Our Past Events',
     subtitle:
       'From NASCON to Red vs Blue Team competitions, workshops, and DFIR simulations - explore the impactful events organized by CSL since its inception in 2021.',
