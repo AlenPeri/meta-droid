@@ -13,21 +13,23 @@ const Insights = () => (
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} mx-auto flex flex-col`}
+      className={`${styles.innerWidth} mx-auto flex flex-col items-center`}
     >
       <TypingText title="| Inside CyberSpace Legion" textStyles="text-center" />
       <TitleText
-        title={<>Explore the Core of <span className="text-[#00FFFF]">CyberSpace Legion</span></>}
+        title={
+          <>
+            Explore the Core of{' '}
+            <span className="text-[#00FFFF]">CyberSpace Legion</span>
+          </>
+        }
         textStyles="text-center"
       />
 
-      <div className="mt-[50px] flex flex-col gap-[30px]">
+      {/* Cards list */}
+      <div className="mt-[40px] flex flex-col gap-[35px] w-full items-center">
         {insights.map((insight, i) => (
-          <InsightCard
-            key={`Insight-${i + 1}`}
-            {...insight}
-            index={i + 1}
-          />
+          <InsightCard key={`Insight-${i + 1}`} {...insight} index={i + 1} />
         ))}
       </div>
     </motion.div>

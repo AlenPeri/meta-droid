@@ -15,6 +15,7 @@ const Page = () => (
       <GetStarted />
       <div className="gradient-04 z-0" />
       <WhatsNew />
+      <div className="gradient-04 z-0" />
     </div>
     <World />
     <div className="relative">

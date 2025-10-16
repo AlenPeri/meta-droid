@@ -30,7 +30,7 @@ const reviews = [
   },
   {
     id: 4,
-    name: "Dr. Aisha",
+    name: "Dr. Mehmood",
     role: "PhD Advisor, Artificial Intelligence & Security",
     text: "The integration of AI into cybersecurity is transforming how we detect and respond to threats. CSL’s initiative to explore AI-driven defense systems is truly forward-thinking.",
     avatar: "/planet-09.png"
