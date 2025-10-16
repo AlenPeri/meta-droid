@@ -1,12 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-
 import { motion } from 'framer-motion';
 import styles from '../styles';
 import { TypingText, ExploreCard, TitleText } from '../components';
 import { staggerContainer } from '../utils/motion';
-
 import { exploreWorlds } from '../constants';
 
 const Explore = () => {
@@ -21,10 +19,33 @@ const Explore = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}
       >
-        <TypingText title="| The World" textStyles="text-center" />
-        <TitleText title={<>Choose the world you want <br className="md:block hidden " />to Explore</>} textStyles="text-center" />
+        {/* Section Header */}
+        <TypingText title="| Explore CSL Domains" textStyles="text-center" />
 
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <TitleText
+          title={(
+            <>
+              Dive into the core areas of{' '}
+              <span className="text-cyan-400">CSL</span>
+              <br className="md:block hidden" /> -
+              Where students evolve into cybersecurity professionals!
+            </>
+          )}
+          textStyles="text-center"
+        />
+
+        {/* Explore Cards */}
+        <div
+          className="
+            mt-10
+            flex flex-col lg:flex-row
+            justify-center lg:justify-between
+            items-stretch
+            gap-6
+            min-h-[60vh] sm:min-h-[70vh]
+            px-4
+          "
+        >
           {exploreWorlds.map((world, index) => (
             <ExploreCard
               key={world.id}

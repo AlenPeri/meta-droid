@@ -14,11 +14,11 @@ const World = () => (
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto flex flex-col`}
     >
-      <TypingText title="| People on the World" textStyles="text-center" />
+      <TypingText title="| Our Presence" textStyles="text-center" />
       <TitleText
         title={(
           <>
-            Track friends around you and invite them to play together in the same world
+            Based in FAST Islamabad, connected across Pakistan, and collaborating worldwide.
           </>
         )}
         textStyles="text-center"
@@ -30,25 +30,33 @@ const World = () => (
       >
         <img src="/map.png" alt="map" className="w-full h-full object-cover" />
 
-        {/* Here We are displaying chararcters on the map */}
-        <div className="absolute top-[32%] left-[62%] w-[70px] h-[70px] p-[6px] rounded-full bg-[#5d6680]">
-          <img src="/people-02.png" alt="people" className="w-full h-full" />
+        <div className="absolute top-[29%] left-[56%] w-[70px] h-[70px] p-[6px] rounded-full bg-[#5d6680]">
+          <img src="/people-02.png" alt="CSL Islamabad" className="w-full h-full" />
         </div>
+
         <div className="absolute sm:top-10 bottom-40 left-20 w-[70px] h-[70px] p-[6px] rounded-full bg-[#5d6680]">
-          <img src="/people-03.png" alt="people" className="w-full h-full" />
+          <img src="/people-03.png" alt="CSL Karachi" className="w-full h-full" />
         </div>
+
         <div className="hidden lg:block absolute bottom-20 right-20 w-[70px] h-[70px] p-[6px] rounded-full bg-[#5d6680]">
-          <img src="/people-04.png" alt="people" className="w-full h-full" />
+          <img src="/people-04.png" alt="CSL Lahore" className="w-full h-full" />
         </div>
 
         <div className="hidden lg:block absolute bottom-[20%] left-[15%] w-[70px] h-[70px] p-[6px] rounded-full bg-[#5d6680]">
-          <img src="/people-05.png" alt="people" className="w-full h-full" />
+          <img src="/people-05.png" alt="Global Collaborator" className="w-full h-full" />
         </div>
-        <div className="absolute top-0 right-[22%] w-[70px] h-[70px] p-[6px] rounded-full bg-[#5d6680]">
-          <img src="/people-06.png" alt="people" className="w-full h-full" />
-        </div>
-        {/* Character on Map ends */}
 
+        <div className="absolute top-0 right-[22%] w-[70px] h-[70px] p-[6px] rounded-full bg-[#5d6680]">
+          <img src="/people-06.png" alt="Cyber Partners" className="w-full h-full" />
+        </div>
+
+        {/* Optional overlay tagline */}
+        <div className="absolute bottom-[5%] left-1/2 transform -translate-x-1/2 bg-black/60 px-6 py-3 rounded-xl">
+          <p className="text-white text-center text-[16px] md:text-[18px]">
+            <span className="font-semibold text-cyan-400">CyberSpace Legion</span> - 
+            uniting cybersecurity minds from Islamabad to the world.
+          </p>
+        </div>
       </motion.div>
     </motion.div>
   </section>

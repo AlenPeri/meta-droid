@@ -2,86 +2,78 @@ export const exploreWorlds = [
   {
     id: 'world-1',
     imgUrl: '/planet-01.png',
-    title: 'The Hogwarts',
+    title: 'Reverse Engineering',
   },
   {
     id: 'world-2',
     imgUrl: '/planet-02.png',
-    title: 'The Upside Down',
+    title: 'Cryptography',
   },
   {
     id: 'world-3',
     imgUrl: '/planet-03.png',
-    title: 'Hueco Mundo',
+    title: 'Malware Analysis',
   },
   {
     id: 'world-4',
     imgUrl: '/planet-04.png',
-    title: 'Paradise Island',
+    title: 'Digital Forensics & Incident Response',
   },
   {
     id: 'world-5',
     imgUrl: '/planet-05.png',
-    title: 'Hawkins Labs',
+    title: 'Web & Application Security',
   },
 ];
 
+
 export const startingFeatures = [
-  'Find a world that suits you and you want to enter',
-  'Enter the world by reading precaution to be safe',
-  'No need to beat around the bush, just stay on the gas and have fun',
+  'Explore CSL’s domains - from Reverse Engineering to Web Security.',
+  'Join a team that matches your interest: Red Team (Offense) or Blue Team (Defense).',
+  'Participate in workshops, CTFs, and real-world simulations to level up your skills.',
 ];
+
+
 
 export const newFeatures = [
   {
     imgUrl: '/vrpano.svg',
-    title: 'A new world',
+    title: 'Red Team vs Blue Team Competitions',
     subtitle:
-        'we have the latest update with new world for you to try never mind',
+      'Experience live offensive vs defensive cybersecurity battles - where Red Team attacks, and Blue Team defends in real-time simulation events.',
   },
   {
     imgUrl: '/headset.svg',
-    title: 'More realistic',
+    title: 'Disaster Recovery & Incident Response Simulations',
     subtitle:
-        'In the latest update, your eyes are narrow, making the world more realistic than ever',
+      'From workshops and webinars to hands-on simulations - test your skills in managing cyber crises and restoring systems after attacks.',
   },
 ];
+
+
 
 export const insights = [
   {
     imgUrl: '/planet-06.png',
-    title: 'The launch of the Metaverse and be happy :)',
+    title: 'Our Mentors',
     subtitle:
-        'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
+      'CyberSpace Legion is guided by highly accomplished mentors - PhD professionals and industry experts from FAST-NUCES and the cybersecurity domain, ensuring every initiative aligns with real-world expertise.',
+    link: '/mentors',
   },
   {
     imgUrl: '/planet-07.png',
-    title: '7 tips to easily master the madness of the Metaverse',
+    title: 'Executive Council',
     subtitle:
-        'Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum',
+      'Meet the core leadership driving CSL - visionary students and professionals leading cybersecurity awareness, competitions, and collaborative initiatives at FAST Islamabad.',
+    link: '/executive-council',
   },
   {
     imgUrl: '/planet-08.png',
-    title: 'With one platform you can explore the whole world virtually',
+    title: 'Our Past Events',
     subtitle:
-        'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+      'From NASCON to Red vs Blue Team competitions, workshops, and DFIR simulations - explore the impactful events organized by CSL since its inception in 2021.',
+    link: '/events',
   },
 ];
 
-export const socials = [
-  {
-    name: 'twitter',
-    url: '/twitter.svg',
-    link: 'https://twitter.com/VigneshGupta9',
-  },
-  {
-    name: 'linkedin',
-    url: '/linkedin.svg',
-    link: 'https://www.linkedin.com/in/vigneshgupta/',
-  },
-  {
-    name: 'instagram',
-    url: '/instagram.svg',
-    link: 'https://www.instagram.com/_viggi.g_/',
-  },
-];
+

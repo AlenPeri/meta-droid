@@ -16,18 +16,32 @@ const About = () => (
       viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     >
+      {/* Section heading */}
       <TypingText
-        title="| About Metadroid"
+        title="| About Cyberspace Legion"
         textStyles="text-center"
       />
 
+      {/* About text */}
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
-        <span className="font-extrabold"> Metadroid </span> is a new thing in the future, where you can enjoy the virtual world by feeling like it's really real, you can feel what you feel in this metaverse world, because this is really the <span className="font-extrabold">madness of the metaverse</span> of today, using only <span className="font-extrabold">VR</span> devices you can easily explore the metaverse world you want, turn your dreams into reality. Let's <span className="font-extrabold">explore</span> the madness of the metaverse by scrolling down
+        <span className="font-extrabold text-white">Cyberspace Legion (CSL)</span> is the leading{' '}
+        <span className="font-extrabold text-white">cybersecurity society</span> at{' '}
+        <span className="font-extrabold text-white">FAST NUCES, Islamabad</span> - the top
+        university for Computer Science in Pakistan. Established on{' '}
+        <span className="font-extrabold text-white">November 9th, 2021</span>, CSL is dedicated
+        to promoting awareness, education, and innovation in digital security and ethical hacking. <br /><br />
+        We provide students a platform to{' '}
+        <span className="font-extrabold text-white">learn, collaborate, and lead</span> through
+        hands-on trainings, national-level events, and mentorship from industry professionals.{' '}
+        Our mission is to shape the next generation of{' '}
+        <span className="font-extrabold text-white">cyber defenders</span> — individuals who are
+        ready to safeguard the digital frontier of tomorrow.
       </motion.p>
 
+      {/* Arrow */}
       <motion.img
         variants={fadeIn('up', 'tween', 0.3, 1)}
         src="/arrow-down.svg"

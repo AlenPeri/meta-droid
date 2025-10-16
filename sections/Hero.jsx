@@ -2,56 +2,41 @@
 
 import { motion } from 'framer-motion';
 import styles from '../styles';
-import { slideIn, staggerContainer, textVariant } from '../utils/motion';
+import { staggerContainer, textVariant } from '../utils/motion';
+import CursorEffect from '../components/CursorEffect';
 
 const Hero = () => (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
+  <section
+    className={`${styles.yPaddings} sm:pl-16 pl-6 relative min-h-screen flex items-center justify-center`}
+    style={{ paddingTop: '100px' }} 
+  >
+    {/* Tubes Cursor Background */}
+    <CursorEffect />
+
     <motion.div
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth2} mx-auto flex flex-col`}
+      className="relative z-10 text-center flex flex-col items-center justify-center"
     >
-      <div className="relative z-10 flex flex-col items-center justify-center">
-        <motion.h1
-          variants={textVariant(1.1)}
-          className={styles.heroHeading}
-        >
-          Metadroid
-        </motion.h1>
-        <motion.div
-          variants={textVariant(1.2)}
-          className="flex flex-row items-center justify-center"
-        >
-          <h1 className={styles.heroHeading}> Ma</h1>
-          <div className={styles.heroDText} />
-          <h1 className={styles.heroHeading}> Ness</h1>
-        </motion.div>
-      </div>
+      <motion.h1
+        variants={textVariant(1.1)}
+        className="text-white text-[80px] sm:text-[100px] font-[700] uppercase tracking-wide leading-[1] font-['Montserrat',serif]"
+      >
+        CYBER SPACE
+      </motion.h1>
 
       <motion.div
-        variants={slideIn('right', 'tween', 0.2, 1)}
-        className="relative w-full lg:-mt-[30px] md:-mt-[18px] -mt-[15px]  2xl:pl-[280px]"
+        variants={textVariant(1.2)}
+        className="flex flex-row items-center justify-center"
       >
-        <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] sm:-top-[20px] -top-[10px]" />
-        <img
-          src="/cover.png"
-          alt="cover"
-          className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
-        />
-
-        <a href="#explore">
-          <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10 2xl:-ml-[100px]">
-            <motion.img
-              src="/stamp.png"
-              alt="stamp"
-              className="sm:w-[155px] w-[100px] sm:h-[155px] h-[100px] object-contain "
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 7, repeatType: 'loop' }}
-            />
-          </div>
-        </a>
+        <h1 className="text-white text-[80px] sm:text-[100px] font-[700] uppercase leading-[1] font-['Montserrat',serif]">
+          LEG
+        </h1>
+        <h1 className="text-white text-[80px] sm:text-[100px] font-[700] uppercase leading-[1] font-['Montserrat',serif]">
+          ION
+        </h1>
       </motion.div>
     </motion.div>
   </section>
