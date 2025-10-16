@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import TubesCursor from 'threejs-components/build/cursors/tubes1.min.js';
 
 const CursorEffect = () => {
   const containerRef = useRef(null);
@@ -7,62 +8,45 @@ const CursorEffect = () => {
   const appRef = useRef(null);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return; // Ensure it runs only in browser
+    const canvas = canvasRef.current;
+    const container = containerRef.current;
+    if (!canvas || !container) return;
 
-    const init = async () => {
-      try {
-        const { default: TubesCursor } = await import(
-          'threejs-components/build/cursors/tubes1.min.js'
-        );
+    const app = TubesCursor(canvas, {
+      tubes: {
+        colors: ['#f967fb', '#53bc28', '#6958d5'],
+        lights: {
+          intensity: 200,
+          colors: ['#83f36e', '#fe8a2e', '#ff008a', '#60aed5'],
+        },
+      },
+    });
 
-        const canvas = canvasRef.current;
-        const container = containerRef.current;
-        if (!canvas || !container) return;
+    appRef.current = app;
 
-        const app = TubesCursor(canvas, {
-          tubes: {
-            colors: ['#f967fb', '#53bc28', '#6958d5'],
-            lights: {
-              intensity: 200,
-              colors: ['#83f36e', '#fe8a2e', '#ff008a', '#60aed5'],
-            },
-          },
-        });
+    const randomColors = (count) =>
+      Array.from({ length: count }, () =>
+        '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')
+      );
 
-        appRef.current = app;
+    const handleClick = () => {
+      if (!appRef.current?.tubes) return;
 
-        const randomColors = (count) =>
-          Array.from({ length: count }, () =>
-            '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')
-          );
+      const newTubeColors = randomColors(3);
+      const newLightColors = randomColors(4);
 
-        const handleClick = () => {
-          if (!appRef.current?.tubes) return;
-
-          const newTubeColors = randomColors(3);
-          const newLightColors = randomColors(4);
-
-          appRef.current.tubes.setColors(newTubeColors);
-          appRef.current.tubes.setLightsColors(newLightColors);
-          console.log('Tubes and light colors updated');
-        };
-
-        window.addEventListener('click', handleClick);
-
-        // Cleanup
-        return () => {
-          window.removeEventListener('click', handleClick);
-          if (appRef.current?.destroy) appRef.current.destroy();
-        };
-      } catch (err) {
-        console.error('Error loading TubesCursor:', err);
-      }
+      appRef.current.tubes.setColors(newTubeColors);
+      appRef.current.tubes.setLightsColors(newLightColors);
+      console.log('🎨 Tubes and light colors updated');
     };
 
-    init();
-  }, []);
+    window.addEventListener('click', handleClick);
 
-  if (typeof window === 'undefined') return null; // Prevent SSR render
+    return () => {
+      window.removeEventListener('click', handleClick);
+      if (appRef.current?.destroy) appRef.current.destroy();
+    };
+  }, []);
 
   return (
     <div
